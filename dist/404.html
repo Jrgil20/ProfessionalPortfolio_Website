@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redireccionando...</title>
+  <script>
+    // Redirección simple para HashRouter
+    (function() {
+      // Redireccionar a la página principal
+      var baseUrl = window.location.protocol + '//' + window.location.hostname + 
+                   (window.location.port ? ':' + window.location.port : '') + 
+                   '/ProfessionalPortfolio_Website/';
+      
+      window.location.href = baseUrl;
+    })();
+  </script>
+</head>
+<body>
+  <p>Si no eres redireccionado automáticamente, <a href="/ProfessionalPortfolio_Website/">haz clic aquí</a>.</p>
+</body>
+</html>
