@@ -78,5 +78,25 @@ export const skillsData: SkillCategory[] = [
         ]
       }
     ]
+  },
+  {
+    id: 'soft-skills',
+    name: 'Habilidades Blandas',
+    skills: [
+      {
+        name: 'Gestión del Tiempo',
+        level: 3,
+        projects: [],
+        certifications: [
+          {
+            name: 'Gestión Del Tiempo: Productividad y Planificación Objetivos',
+            issuer: 'Udemy',
+            type: 'curso',
+            level: 'intermedio',
+            date: 'Febrero 2023'
+          }
+        ]
+      }
+    ]
   }
 ];

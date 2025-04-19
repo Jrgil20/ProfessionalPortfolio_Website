@@ -45,5 +45,15 @@ export const certificationsData: Certification[] = [
     skills: ['Lenguaje de programación: JAVA'],
     imageUrl: 'https://udemy-certificate.s3.amazonaws.com/image/UC-70267a58-44f7-47b4-9f5a-cd4aaf73d135.jpg?v=1695561503000',
     certificateUrl: 'https://www.udemy.com/certificate/UC-70267a58-44f7-47b4-9f5a-cd4aaf73d135/'
+  },
+  {
+    id: 'cert-4',
+    title: 'Gestión Del Tiempo: Productividad y Planificación Objetivos',
+    provider: 'Udemy',
+    date: '7 de febrero de 2023',
+    description: 'Certificado de finalización de Udemy. Duración: 1 hora en total.',
+    skills: ['Gestión del tiempo', 'Productividad'],
+    imageUrl: 'https://udemy-certificate.s3.amazonaws.com/image/UC-50268fcd-d61a-4dfb-9d44-2f8d22cf9897.jpg?v=1675826844000',
+    certificateUrl: 'https://www.udemy.com/certificate/UC-50268fcd-d61a-4dfb-9d44-2f8d22cf9897/'
   }
 ];
