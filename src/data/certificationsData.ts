@@ -35,5 +35,15 @@ export const certificationsData: Certification[] = [
     skills: ['Control de versiones', 'Github'],
     imageUrl: 'https://udemy-certificate.s3.amazonaws.com/image/UC-e05cdb24-ef21-46e7-b6ff-653e276ef402.jpg?v=1729722776000',
     certificateUrl: 'https://www.udemy.com/certificate/UC-e05cdb24-ef21-46e7-b6ff-653e276ef402/'
+  },
+  {
+    id: 'cert-3',
+    title: 'Curso de Java - Nivel Básico',
+    provider: 'Udemy',
+    date: '24 de septiembre de 2023',
+    description: 'Certificado de finalización de Udemy. Duración: 4.5 horas en total.',
+    skills: ['Lenguaje de programación: JAVA'],
+    imageUrl: 'https://udemy-certificate.s3.amazonaws.com/image/UC-70267a58-44f7-47b4-9f5a-cd4aaf73d135.jpg?v=1695561503000',
+    certificateUrl: 'https://www.udemy.com/certificate/UC-70267a58-44f7-47b4-9f5a-cd4aaf73d135/'
   }
 ];
