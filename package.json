@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://jrgil20.github.io/professional-portfolio",
+  "homepage": "https://jrgil20.github.io/ProfessionalPortfolio_Website",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
