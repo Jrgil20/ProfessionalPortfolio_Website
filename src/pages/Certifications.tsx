@@ -19,14 +19,16 @@ const Certifications = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCertificate, setSelectedCertificate] = useState<Certification | null>(null);
   
-  const filteredCertifications = certificationsData.filter((cert) => {
-    const matchesProvider = selectedProvider === 'All' || cert.provider === selectedProvider;
-    const matchesSearch = cert.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+  const filteredCertifications = certificationsData
+    .filter((cert) => {
+      const matchesProvider = selectedProvider === 'All' || cert.provider === selectedProvider;
+      const matchesSearch = cert.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           cert.provider.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           cert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           cert.skills.some(skill => skill.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesProvider && matchesSearch;
-  });
+      return matchesProvider && matchesSearch;
+    })
+    .sort((a, b) => b.date.getTime() - a.date.getTime()); // Ordenar por fecha, más reciente primero
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
