@@ -140,5 +140,45 @@ export const skillsData: SkillCategory[] = [
         ]
       }
     ]
+  },
+  {
+    id: 'dev-tools',
+    name: 'Herramientas de Desarrollo',
+    skills: [
+      {
+        name: 'Visual Studio Code',
+        level: 4,
+        projects: [],
+        certifications: [
+          {
+            name: 'Curso de Visual Studio Code y GitHub Copilot',
+            issuer: 'Código Facilito',
+            type: 'curso',
+            level: 'intermedio',
+            date: 'Abril 2025'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'ai-tools',
+    name: 'Herramientas de IA',
+    skills: [
+      {
+        name: 'GitHub Copilot',
+        level: 4,
+        projects: [],
+        certifications: [
+          {
+            name: 'Curso de Visual Studio Code y GitHub Copilot',
+            issuer: 'Código Facilito',
+            type: 'curso',
+            level: 'intermedio',
+            date: 'Abril 2025'
+          }
+        ]
+      }
+    ]
   }
 ];

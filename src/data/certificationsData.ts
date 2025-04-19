@@ -13,6 +13,7 @@ export const providers = [
   'All',
   'Udemy',
   'Platzi',
+  'Código Facilito',
   'Others'
 ];
 
@@ -96,5 +97,15 @@ export const certificationsData: Certification[] = [
     skills: ['Gestión del tiempo', 'Productividad'],
     imageUrl: 'https://udemy-certificate.s3.amazonaws.com/image/UC-50268fcd-d61a-4dfb-9d44-2f8d22cf9897.jpg?v=1675826844000',
     certificateUrl: 'https://www.udemy.com/certificate/UC-50268fcd-d61a-4dfb-9d44-2f8d22cf9897/'
+  },
+  {
+    id: 'cert-9',
+    title: 'Curso de Visual Studio Code y GitHub Copilot',
+    provider: 'Código Facilito',
+    date: new Date('2025-04-15'),
+    description: 'Certificado de aprobación de Código Facilito.',
+    skills: ['IDE/VSCode', 'IA/GitHub Copilot'],
+    imageUrl: 'https://codigofacilito.com/assets/certificate-placeholder-c9758dcd4e3398322cc590f6313fde7b4d184b28e67d3500ffdac5d690a75b41.png',
+    certificateUrl: 'https://codigofacilito.com/certificates/c8724f43-aa59-4865-8094-66f59c82f047'
   }
 ];
