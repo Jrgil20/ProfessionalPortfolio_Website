@@ -106,7 +106,8 @@ const Projects = () => {
                         {project.technologies.slice(0, 4).map((tech, index) => (
                           <span
                             key={index}
-                            className={`inline-block px-2 py-1 ${tech.color} text-white rounded-full text-xs font-medium`}
+                            style={{ backgroundColor: tech.color }}
+                            className="inline-block px-2 py-1 text-white rounded-full text-xs font-medium"
                           >
                             {tech.name}
                           </span>
@@ -227,7 +228,8 @@ const Projects = () => {
                       {selectedProject.technologies.map((tech, index) => (
                         <span
                           key={index}
-                          className={`inline-block px-3 py-1.5 ${tech.color} text-white rounded-full text-sm font-medium`}
+                          style={{ backgroundColor: tech.color }}
+                          className="inline-block px-3 py-1.5 text-white rounded-full text-sm font-medium"
                         >
                           {tech.name}
                         </span>

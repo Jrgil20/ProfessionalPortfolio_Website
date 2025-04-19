@@ -91,6 +91,14 @@ export const skillsData: SkillCategory[] = [
             date: 'Marzo 2025'
           }
         ]
+      },
+      {
+        name: 'Pascal',
+        level: 1, // lenguaje de programación básico
+        projects: [
+          { name: 'AC_alive', description: 'Implementación del Juego de la Vida de Conway en Pascal como parte del proyecto académico AC_alive' }
+        ],
+        certifications: []
       }
     ]
   },
