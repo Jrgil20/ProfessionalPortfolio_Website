@@ -3,33 +3,42 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main # o master, dependiendo de cómo se llame tu rama principal
 
-permissions:
-  contents: write
+# Permite cancelar cualquier ejecución anterior en curso
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
+    name: Build and Deploy
     runs-on: ubuntu-latest
     
+    permissions:
+      contents: write # para poder hacer push al branch gh-pages
+      pages: write
+      id-token: write
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
-
+          node-version: '20'
+          cache: 'npm'
+      
       - name: Install dependencies
-        run: npm install
-
-      - name: Build project
+        run: npm ci
+      
+      - name: Build
         run: npm run build
-
+      
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist
-          branch: main
-          target-folder: docs
+          folder: dist # La carpeta que contiene los archivos de construcción
+          branch: gh-pages # La rama a la que se debe implementar
+          clean: true # Elimina archivos antiguos
