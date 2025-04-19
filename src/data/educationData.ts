@@ -14,50 +14,27 @@ export type Education = {
 export const educationData: Education[] = [
   {
     id: 'edu-1',
-    institution: 'Stanford University',
-    degree: 'Master of Science',
-    field: 'Computer Science',
-    startDate: '2021',
-    endDate: '2023',
-    description: 'Specialized in Artificial Intelligence and Machine Learning with emphasis on computer vision and natural language processing.',
+    institution: 'Universidad Catolica Andres Bello',
+    degree: 'Grado en Ingeniería',
+    field: 'Ingeniería informática',
+    startDate: 'mar. 2020',
+    endDate: 'ene. 2026',
+    description: 'Actividades y grupos: vive la U, Protocolo Ucab, Club Programación, maratón local de Programación, Game jam, micro cursos',
     achievements: [
-      'Graduated with distinction (GPA: 3.92/4.0)',
-      'Outstanding Research Award for thesis on "Neural Networks for Image Recognition"',
-      'Teaching Assistant for Machine Learning and Algorithms courses'
+      'Participante recurrente de las actividades de DIDES.',
+      'Trabajando en actividad protocolar con cultura UCAB.'
     ],
-    coursework: [
-      'Advanced Machine Learning',
-      'Deep Learning',
-      'Computer Vision',
-      'Natural Language Processing',
-      'Reinforcement Learning',
-      'Distributed Systems'
-    ],
-    logo: 'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    coursework: []
   },
   {
     id: 'edu-2',
-    institution: 'University of California, Berkeley',
-    degree: 'Bachelor of Science',
-    field: 'Computer Science and Engineering',
-    startDate: '2017',
-    endDate: '2021',
-    description: 'Comprehensive undergraduate education covering fundamentals of computer science, software engineering, and systems design.',
-    achievements: [
-      'Summa Cum Laude graduate (GPA: 3.87/4.0)',
-      'Dean\'s List for all eight semesters',
-      'Undergraduate Research Opportunity Program fellowship',
-      'First Place in Berkeley Hackathon 2019'
-    ],
-    coursework: [
-      'Data Structures and Algorithms',
-      'Computer Architecture',
-      'Operating Systems',
-      'Database Systems',
-      'Software Engineering',
-      'Web Development',
-      'Mobile Application Development'
-    ],
-    logo: 'https://images.pexels.com/photos/1181233/pexels-photo-1181233.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    institution: 'Universidad Catolica Andres Bello',
+    degree: 'Diplomado',
+    field: 'Diplomado en Desarrollo Blockchain y WEB3',
+    startDate: '',
+    endDate: '',
+    description: '',
+    achievements: [],
+    coursework: []
   }
 ];

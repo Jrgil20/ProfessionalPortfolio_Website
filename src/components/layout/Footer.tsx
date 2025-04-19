@@ -1,14 +1,15 @@
 import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { profileData } from '../../data/profileData';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { name: 'GitHub', icon: <Github size={20} />, url: 'https://github.com/' },
-    { name: 'LinkedIn', icon: <Linkedin size={20} />, url: 'https://linkedin.com/in/' },
-    { name: 'Twitter', icon: <Twitter size={20} />, url: 'https://twitter.com/' },
-    { name: 'Email', icon: <Mail size={20} />, url: 'mailto:example@email.com' },
+    { name: 'GitHub', icon: <Github size={20} />, url: profileData.socialLinks.github || '#' },
+    { name: 'LinkedIn', icon: <Linkedin size={20} />, url: profileData.socialLinks.linkedin || '#' },
+    { name: 'Twitter', icon: <Twitter size={20} />, url: profileData.socialLinks.twitter || '#' },
+    { name: 'Email', icon: <Mail size={20} />, url: `mailto:${profileData.email}` },
   ];
 
   return (
@@ -41,9 +42,8 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-white">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-neutral-400">example@email.com</li>
-              <li className="text-neutral-400">+1 (555) 123-4567</li>
-              <li className="text-neutral-400">City, Country</li>
+              <li className="text-neutral-400">{profileData.email}</li>
+              <li className="text-neutral-400">{profileData.location}</li>
             </ul>
           </div>
           
@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
         
         <div className="pt-8 border-t border-neutral-800 text-neutral-500 text-center md:text-left md:flex md:justify-between md:items-center">
-          <p>&copy; {currentYear} Your Name. All rights reserved.</p>
+          <p>&copy; {currentYear} {profileData.name}. All rights reserved.</p>
           <div className="mt-4 md:mt-0">
             <a href="#" className="text-neutral-500 hover:text-white mr-4 transition-colors duration-200">
               Privacy Policy

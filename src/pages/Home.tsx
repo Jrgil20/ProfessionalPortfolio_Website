@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { profileData } from '../data/profileData';
 
 const Home = () => {
+  // Crear arreglo de enlaces sociales basado en el perfil
   const socialLinks = [
-    { name: 'GitHub', icon: <Github size={24} />, url: 'https://github.com/' },
-    { name: 'LinkedIn', icon: <Linkedin size={24} />, url: 'https://linkedin.com/in/' },
-    { name: 'Twitter', icon: <Twitter size={24} />, url: 'https://twitter.com/' },
-    { name: 'Email', icon: <Mail size={24} />, url: 'mailto:example@email.com' },
+    { name: 'GitHub', icon: <Github size={24} />, url: profileData.socialLinks.github || '#' },
+    { name: 'LinkedIn', icon: <Linkedin size={24} />, url: profileData.socialLinks.linkedin || '#' },
+    { name: 'Twitter', icon: <Twitter size={24} />, url: profileData.socialLinks.twitter || '#' },
+    { name: 'Email', icon: <Mail size={24} />, url: `mailto:${profileData.email}` },
   ];
 
   return (
@@ -28,10 +30,10 @@ const Home = () => {
                 className="text-center md:text-left"
               >
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-neutral-900">
-                  Hi, I'm <span className="text-primary-600">John Doe</span>
+                  Hi, I'm <span className="text-primary-600">{profileData.name}</span>
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 text-neutral-700">
-                  Computer Science graduate with a passion for machine learning, web development, and creating impactful solutions.
+                  {profileData.title}
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                   <Link 
@@ -78,8 +80,8 @@ const Home = () => {
             >
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg">
                 <img
-                  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt="John Doe"
+                  src={profileData.photoUrl}
+                  alt={profileData.name}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -110,14 +112,8 @@ const Home = () => {
               transition={{ duration: 0.5 }}
             >
               <h3 className="text-2xl font-semibold mb-4 text-neutral-900">My Journey</h3>
-              <p className="text-neutral-700 mb-4">
-                I'm a Computer Science professional with a Master's degree from Stanford University and a Bachelor's from UC Berkeley. My academic journey has equipped me with strong foundations in algorithms, data structures, and software engineering principles.
-              </p>
-              <p className="text-neutral-700 mb-4">
-                My passion lies at the intersection of artificial intelligence and practical software development. I specialize in machine learning and full-stack web development, with experience in both academic research and industry projects.
-              </p>
               <p className="text-neutral-700">
-                Throughout my career, I've had the opportunity to work on diverse projects ranging from neural network implementations to IoT systems and web applications, all aimed at solving real-world problems through technology.
+                {profileData.summary}
               </p>
             </motion.div>
             
@@ -209,20 +205,14 @@ const Home = () => {
                 <div className="space-y-4">
                   <p className="flex items-center gap-3">
                     <Mail size={20} />
-                    example@email.com
-                  </p>
-                  <p className="flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                    </svg>
-                    +1 (555) 123-4567
+                    {profileData.email}
                   </p>
                   <p className="flex items-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                       <circle cx="12" cy="10" r="3"></circle>
                     </svg>
-                    San Francisco, CA
+                    {profileData.location}
                   </p>
                 </div>
                 
@@ -262,7 +252,7 @@ const Home = () => {
                       type="text"
                       id="name"
                       className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none"
-                      placeholder="John Doe"
+                      placeholder="Your name"
                     />
                   </div>
                   <div>
@@ -273,7 +263,7 @@ const Home = () => {
                       type="email"
                       id="email"
                       className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none"
-                      placeholder="example@email.com"
+                      placeholder="your.email@example.com"
                     />
                   </div>
                   <div>
