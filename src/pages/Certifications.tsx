@@ -6,6 +6,14 @@ import FilterButton from '../components/ui/FilterButton';
 import { certificationsData, providers, Certification } from '../data/certificationsData';
 import { Calendar, ExternalLink } from 'lucide-react';
 
+const formatDate = (date: Date) => {
+  return new Intl.DateTimeFormat('es-ES', { 
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }).format(date);
+};
+
 const Certifications = () => {
   const [selectedProvider, setSelectedProvider] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -99,7 +107,7 @@ const Certifications = () => {
                     <div className="p-4">
                       <div className="flex items-center text-neutral-600 text-sm mb-3">
                         <Calendar size={14} className="mr-1" />
-                        <span>{certificate.date}</span>
+                        <span>{formatDate(certificate.date)}</span>
                       </div>
                       <p className="text-neutral-700 line-clamp-2 mb-3">{certificate.description}</p>
                       <div className="flex flex-wrap gap-2">
@@ -186,7 +194,7 @@ const Certifications = () => {
                     </span>
                     <div className="flex items-center text-neutral-600">
                       <Calendar size={16} className="mr-1" />
-                      <span>{selectedCertificate.date}</span>
+                      <span>{formatDate(selectedCertificate.date)}</span>
                     </div>
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-4">{selectedCertificate.title}</h3>
