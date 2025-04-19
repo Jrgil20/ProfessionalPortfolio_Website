@@ -62,9 +62,9 @@ export const certificationsData: Certification[] = [
     title: 'Curso de Git y GitHub',
     provider: 'Platzi',
     date: '15 de marzo de 2025',
-    description: 'Certificado de aprobación de Platzi.  Duración: 6 horas de contenido. ',
+    description: 'Certificado de aprobación de Platzi. Duración: 6 horas de contenido.',
     skills: ['Control de versiones', 'Git', 'Github'],
-    imageUrl: 'https://static.platzi.com/media/achievements/badge-8-738d990a-87e0-488a-b069-6ac164a2790c.png', // To be updated
+    imageUrl: 'https://static.platzi.com/media/achievements/badge-8-738d990a-87e0-488a-b069-6ac164a2790c.png',
     certificateUrl: 'https://platzi.com/p/jrgil/curso/11059-gitgithub/diploma/detalle/'
   },
   {
@@ -76,5 +76,25 @@ export const certificationsData: Certification[] = [
     skills: ['C++'],
     imageUrl: 'https://static.platzi.com/media/achievements/badges-curso-c-basico-9e53cb3b-acf8-4842-bedd-9210ffaba942.png',
     certificateUrl: 'https://platzi.com/p/jrgil/curso/2372-c-plus-plus/diploma/detalle/'
+  },
+  {
+    id: 'cert-7',
+    title: 'Curso Básico de Programación en Go',
+    provider: 'Platzi',
+    date: '15 de marzo de 2025',
+    description: 'Certificado de aprobación de Platzi. Duración: 4 horas de contenido. Nivel básico.',
+    skills: ['Golang'],
+    imageUrl: 'https://static.platzi.com/media/achievements/badge-go-57d6b6ee-c9de-4d9e-9e2c-29a0c879748d-1859b16d-1c87-4b38-bf0a-aee1256cc355.webp',
+    certificateUrl: 'https://platzi.com/p/jrgil/curso/2232-programacion-golang/diploma/detalle/'
+  },
+  {
+    id: 'cert-8',
+    title: 'Curso de Go Intermedio: Programación Orientada a Objetos y Concurrencia',
+    provider: 'Platzi',
+    date: '16 de marzo de 2025',
+    description: 'Certificado de aprobación de Platzi. Duración: 5 horas de contenido.',
+    skills: ['Golang', 'Programación Orientada a Objetos', 'Concurrencia'],
+    imageUrl: 'https://static.platzi.com/media/achievements/badge-intermedio-golang-20f7fb00-da03-47a1-b62d-4dd583308c52.png',
+    certificateUrl: 'https://platzi.com/p/jrgil/curso/2357-golang-intermedio/diploma/detalle/'
   }
 ];

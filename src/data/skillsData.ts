@@ -31,7 +31,7 @@ export const skillsData: SkillCategory[] = [
     skills: [
       {
         name: 'C',
-        level: 2,
+        level: 3,
         projects: [],
         certifications: [
           {
@@ -68,6 +68,27 @@ export const skillsData: SkillCategory[] = [
             type: 'curso',
             level: 'básico',
             date: 'Septiembre 2023'
+          }
+        ]
+      },
+      {
+        name: 'Go',
+        level: 3,  // Increased to 3 due to having both basic and intermediate certifications
+        projects: [],
+        certifications: [
+          {
+            name: 'Curso de Go Intermedio: Programación Orientada a Objetos y Concurrencia',
+            issuer: 'Platzi',
+            type: 'curso',
+            level: 'intermedio',
+            date: 'Marzo 2025'
+          },
+          {
+            name: 'Curso Básico de Programación en Go',
+            issuer: 'Platzi',
+            type: 'curso',
+            level: 'básico',
+            date: 'Marzo 2025'
           }
         ]
       }
