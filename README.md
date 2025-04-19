@@ -13,8 +13,8 @@ Este proyecto es un portafolio web profesional diseñado para mostrar logros aca
 ### Instalación
 1. Clona este repositorio:
 ```bash
-git clone https://github.com/username/ProfessionalPortfolio_Website.git
-cd ProfessionalPortfolio_Website
+git clone https://github.com/username/ProfessionalPortfolio.git
+cd ProfessionalPortfolio
 ```
 
 2. Instala las dependencias:
@@ -153,4 +153,4 @@ Consulta los documentos específicos en la carpeta `/docs` para obtener informac
 
 ---
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/Jrgil20/ProfessionalPortfolio_Website)
+[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/Jrgil20/ProfessionalPortfolio)
