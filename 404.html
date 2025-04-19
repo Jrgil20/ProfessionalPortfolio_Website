@@ -4,40 +4,18 @@
   <meta charset="utf-8">
   <title>Redireccionando...</title>
   <script>
-    // Redireccionamiento para GitHub Pages con client-side routing
+    // Redirección simple para HashRouter
     (function() {
-      // Para evitar parpadeo al cargar
-      document.body.style.display = 'none';
-      
-      // Obtener la ubicación actual
-      var location = window.location;
-      var pathSegments = location.pathname.split('/');
-      var repoName = 'professional-portfolio';
-      var hasRepoSegment = pathSegments.indexOf(repoName) !== -1;
-      
-      // Extraer la ruta relativa después del nombre del repositorio
-      var cleanPath = '';
-      if (hasRepoSegment) {
-        var repoIndex = pathSegments.indexOf(repoName);
-        cleanPath = '/' + pathSegments.slice(repoIndex + 1).join('/');
-      } else {
-        cleanPath = location.pathname;
-      }
-      
-      // Almacenar la ruta para que index.html pueda redireccionar correctamente
-      var redirectPath = cleanPath || '';
-      localStorage.setItem('redirect_path', redirectPath);
-      
       // Redireccionar a la página principal
-      var baseUrl = location.protocol + '//' + location.hostname + 
-                    (location.port ? ':' + location.port : '') + 
-                    (hasRepoSegment ? '/' + repoName : '');
-                    
+      var baseUrl = window.location.protocol + '//' + window.location.hostname + 
+                   (window.location.port ? ':' + window.location.port : '') + 
+                   '/professional-portfolio/';
+      
       window.location.href = baseUrl;
     })();
   </script>
 </head>
 <body>
-  <p>Si no eres redireccionado automáticamente, <a href="/">haz clic aquí</a>.</p>
+  <p>Si no eres redireccionado automáticamente, <a href="/professional-portfolio/">haz clic aquí</a>.</p>
 </body>
 </html>

@@ -8,23 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
-    <script type="text/javascript">
-      // Script para manejar redirección desde 404.html
-      (function() {
-        var redirectPath = localStorage.getItem('redirect_path');
-        if (redirectPath) {
-          localStorage.removeItem('redirect_path');
-          
-          // Solo redireccionar si estamos en la raíz pero hay una ruta guardada
-          if (window.location.pathname.replace(/\/professional-portfolio\/?$/, '') === '' && redirectPath !== '/') {
-            // Usar history API si está disponible, para una transición más suave
-            if (window.history && window.history.replaceState) {
-              history.replaceState(null, null, redirectPath);
-            }
-          }
-        }
-      })();
-    </script>
+    <!-- Eliminar el script de redirección ya que estamos usando HashRouter -->
     <script type="module" crossorigin src="/professional-portfolio/assets/index-BxrJYoBA.js"></script>
     <link rel="stylesheet" crossorigin href="/professional-portfolio/assets/index-pzvGUe4O.css">
   </head>
