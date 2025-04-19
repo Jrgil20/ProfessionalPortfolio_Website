@@ -28,6 +28,7 @@ const Navbar = () => {
     setIsMenuOpen(false);
   }, [location.pathname]);
 
+  // Nota: Mantenemos las rutas simples, HashRouter se encargará de manejarlas adecuadamente
   const navItems = [
     { name: 'About', path: '/', icon: <User size={18} /> },
     { name: 'Education', path: '/education', icon: <GraduationCap size={18} /> },
