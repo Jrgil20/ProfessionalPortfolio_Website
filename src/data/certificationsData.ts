@@ -12,6 +12,7 @@ export type Certification = {
 export const providers = [
   'All',
   'Udemy',
+  'Platzi',
   'Others'
 ];
 
@@ -55,5 +56,15 @@ export const certificationsData: Certification[] = [
     skills: ['Gestión del tiempo', 'Productividad'],
     imageUrl: 'https://udemy-certificate.s3.amazonaws.com/image/UC-50268fcd-d61a-4dfb-9d44-2f8d22cf9897.jpg?v=1675826844000',
     certificateUrl: 'https://www.udemy.com/certificate/UC-50268fcd-d61a-4dfb-9d44-2f8d22cf9897/'
+  },
+  {
+    id: 'cert-5',
+    title: 'Curso de Git y GitHub',
+    provider: 'Platzi',
+    date: '15 de marzo de 2025',
+    description: 'Certificado de aprobación de Platzi. Duración: 6 horas de contenido. Nivel básico.',
+    skills: ['Control de versiones', 'Git', 'Github'],
+    imageUrl: 'https://static.platzi.com/media/achievements/badge-8-738d990a-87e0-488a-b069-6ac164a2790c.png', // To be updated
+    certificateUrl: 'https://platzi.com/p/jrgil/curso/11059-gitgithub/diploma/detalle/'
   }
 ];

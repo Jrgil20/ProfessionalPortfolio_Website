@@ -65,9 +65,16 @@ export const skillsData: SkillCategory[] = [
     skills: [
       {
         name: 'Control de Versiones (Git/Github)',
-        level: 3,
+        level: 4,  // Increased level due to multiple certifications
         projects: [],
         certifications: [
+          {
+            name: 'Curso de Git y GitHub',
+            issuer: 'Platzi',
+            type: 'curso',
+            level: 'básico',
+            date: 'Marzo 2025'
+          },
           {
             name: 'Github Basics',
             issuer: 'Udemy',
