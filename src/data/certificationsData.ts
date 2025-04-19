@@ -62,9 +62,19 @@ export const certificationsData: Certification[] = [
     title: 'Curso de Git y GitHub',
     provider: 'Platzi',
     date: '15 de marzo de 2025',
-    description: 'Certificado de aprobación de Platzi. Duración: 6 horas de contenido. Nivel básico.',
+    description: 'Certificado de aprobación de Platzi.  Duración: 6 horas de contenido. ',
     skills: ['Control de versiones', 'Git', 'Github'],
     imageUrl: 'https://static.platzi.com/media/achievements/badge-8-738d990a-87e0-488a-b069-6ac164a2790c.png', // To be updated
     certificateUrl: 'https://platzi.com/p/jrgil/curso/11059-gitgithub/diploma/detalle/'
+  },
+  {
+    id: 'cert-6',
+    title: 'Curso de C++ Básico',
+    provider: 'Platzi',
+    date: '17 de noviembre de 2024',
+    description: 'Certificado de aprobación de Platzi.  Duración: 2 horas de contenido. ',
+    skills: ['C++'],
+    imageUrl: 'https://static.platzi.com/media/achievements/badges-curso-c-basico-9e53cb3b-acf8-4842-bedd-9210ffaba942.png',
+    certificateUrl: 'https://platzi.com/p/jrgil/curso/2372-c-plus-plus/diploma/detalle/'
   }
 ];

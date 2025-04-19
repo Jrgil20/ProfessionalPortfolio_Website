@@ -31,7 +31,7 @@ export const skillsData: SkillCategory[] = [
     skills: [
       {
         name: 'C',
-        level: 4,
+        level: 2,
         projects: [],
         certifications: [
           {
@@ -44,8 +44,22 @@ export const skillsData: SkillCategory[] = [
         ]
       },
       {
+        name: 'C++',
+        level: 2,
+        projects: [],
+        certifications: [
+          {
+            name: 'Curso de C++ Básico',
+            issuer: 'Platzi',
+            type: 'curso',
+            level: 'básico',
+            date: 'Noviembre 2024'
+          }
+        ]
+      },
+      {
         name: 'Java',
-        level: 3,
+        level: 2,
         projects: [],
         certifications: [
           {
@@ -65,7 +79,7 @@ export const skillsData: SkillCategory[] = [
     skills: [
       {
         name: 'Control de Versiones (Git/Github)',
-        level: 4,  // Increased level due to multiple certifications
+        level: 3,  // Increased level due to multiple certifications
         projects: [],
         certifications: [
           {
@@ -92,7 +106,7 @@ export const skillsData: SkillCategory[] = [
     skills: [
       {
         name: 'Gestión del Tiempo',
-        level: 3,
+        level: 2,
         projects: [],
         certifications: [
           {
