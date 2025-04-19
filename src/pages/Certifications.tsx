@@ -24,6 +24,13 @@ const Certifications = () => {
     setSearchQuery(query);
   };
 
+  const handleViewCertificate = (certificateUrl: string, e?: React.MouseEvent) => {
+    if (e) {
+      e.stopPropagation(); // Evitar que se abra el modal solo si el evento existe
+    }
+    window.open(certificateUrl, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <>
       <section className="py-16 md:py-24 bg-gradient-to-b from-secondary-50 to-white">
@@ -112,15 +119,14 @@ const Certifications = () => {
                       </div>
                     </div>
                     <div className="p-4 pt-0 flex justify-end">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setSelectedCertificate(certificate);
-                        }}
-                        className="text-sm text-secondary-600 hover:text-secondary-800 font-medium flex items-center"
-                      >
-                        View Certificate <ExternalLink size={14} className="ml-1" />
-                      </button>
+                      {certificate.certificateUrl && (
+                        <button
+                          onClick={(e) => handleViewCertificate(certificate.certificateUrl!, e)}
+                          className="inline-flex items-center text-sm text-secondary-600 hover:text-secondary-800 font-medium"
+                        >
+                          Ver Certificado <ExternalLink size={14} className="ml-1" />
+                        </button>
+                      )}
                     </div>
                   </motion.div>
                 ))
@@ -142,7 +148,7 @@ const Certifications = () => {
           </AnimatePresence>
         </div>
       </section>
-      
+
       {/* Certificate Modal */}
       {selectedCertificate && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75">
@@ -201,15 +207,13 @@ const Certifications = () => {
                   </div>
                   
                   {selectedCertificate.certificateUrl && (
-                    <div className="flex justify-center">
-                      <a
-                        href={selectedCertificate.certificateUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-secondary inline-flex items-center"
+                    <div className="flex justify-center mt-8">
+                      <button
+                        onClick={() => handleViewCertificate(selectedCertificate.certificateUrl!)}
+                        className="px-6 py-3 bg-secondary-600 hover:bg-secondary-700 text-white font-medium rounded-lg transition-colors duration-200 flex items-center"
                       >
-                        View Original Certificate <ExternalLink size={16} className="ml-2" />
-                      </a>
+                        Ver Certificado Original <ExternalLink size={16} className="ml-2" />
+                      </button>
                     </div>
                   )}
                 </div>
