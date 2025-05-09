@@ -118,6 +118,19 @@ const Education = () => {
                   <div className="mb-4">
                     <h4 className="text-xl font-semibold mb-1">{selectedEducation.degree} in {selectedEducation.field}</h4>
                     <p className="text-neutral-700">{selectedEducation.description}</p>
+                    {selectedEducation.certificateUrl && (
+                      <div className="mt-4">
+                        <a 
+                          href={selectedEducation.certificateUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors"
+                        >
+                          <BookOpen size={18} />
+                          Ver Certificado
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
                 

@@ -9,6 +9,7 @@ export type Education = {
   achievements: string[];
   coursework: string[];
   logo?: string;
+  certificateUrl?: string;
 };
 
 export const educationData: Education[] = [
@@ -31,10 +32,20 @@ export const educationData: Education[] = [
     institution: 'Universidad Catolica Andres Bello',
     degree: 'Diplomado',
     field: 'Diplomado en Desarrollo Blockchain y WEB3',
-    startDate: '',
-    endDate: '',
-    description: '',
-    achievements: [],
-    coursework: []
+    startDate: 'feb. 2025',
+    endDate: 'may. 2025',
+    description: 'Programa intensivo para el desarrollo de aplicaciones descentralizadas y comprensión del ecosistema blockchain.',
+    achievements: [
+      'Desarrollo de proyecto final: DApp con Smart Contracts',
+      'Certificado obtenido con mención honorífica'
+    ],
+    certificateUrl: '/DiplomadoDesarrolloBlockChianWeb3.pdf',
+    coursework: [
+      'Fundamentos de Blockchain',
+      'Smart Contracts con Solidity',
+      'Desarrollo de DApps',
+      'Web3 y Ecosistema Ethereum',
+      'Tokenización de activos'
+    ]
   }
 ];

@@ -14,6 +14,7 @@ export const providers = [
   'Udemy',
   'Platzi',
   'Código Facilito',
+  'UCAB',
   'Others'
 ];
 
@@ -107,5 +108,15 @@ export const certificationsData: Certification[] = [
     skills: ['IDE/VSCode', 'IA/GitHub Copilot'],
     imageUrl: 'https://codigofacilito.com/assets/certificate-placeholder-c9758dcd4e3398322cc590f6313fde7b4d184b28e67d3500ffdac5d690a75b41.png',
     certificateUrl: 'https://codigofacilito.com/certificates/c8724f43-aa59-4865-8094-66f59c82f047'
+  },
+  {
+    id: 'cert-10',
+    title: 'Diplomado en Desarrollo Blockchain y WEB3',
+    provider: 'UCAB',
+    date: new Date('2025-05-09'),
+    description: 'Certificado de aprobación del Diplomado en Desarrollo Blockchain y WEB3. Duración: 120 horas de contenido.',
+    skills: ['Blockchain', 'Smart Contracts', 'Ethereum', 'Web3', 'Solidity', 'DApps'],
+    imageUrl: 'https://example.com/path/to/blockchain-certificate.png',
+    certificateUrl: 'https://example.com/path/to/blockchain-certificate'
   }
 ];
